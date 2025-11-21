@@ -1,16 +1,84 @@
 ---
-
+import Layout from '../Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="BLACKPINK - Website">
+
+    <main>
+        <section class="carousel-section fade-in-up">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+       
+                </div>
+                <div class="carousel-overlay">
+                    <div class="carousel-member-names">
+                        <span>JISOO</span>
+                        <span>JENNIE</span>
+                        <span>ROSÉ</span>
+                        <span>LISA</span>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" id="prevBtn">‹</button>
+                <button class="carousel-btn next" id="nextBtn">›</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </section>
+
+        <section class="index-section">
+            <div class="hero-content">
+                <h2 class="index-title">Welcome to the PINK VENOM Era</h2>
+                <p class="index-subtitle">The world's biggest girl group</p>
+                <p class="index-description">
+                    BLACKPINK is a South Korean girl group formed by YG Entertainment, consisting of members 
+                    <strong>Jisoo, Jennie, Rosé, and Lisa</strong>. Since their debut in 2016, they have 
+                    become global superstars, breaking records and redefining K-pop worldwide.
+                </p>
+                <div class="index-grid">
+                    <div class="index-card">
+                        <h3>93M+</h3>
+                        <p>YouTube Subscribers</p>
+                    </div>
+                    <div class="index-card">
+                        <h3>4</h3>
+                        <p>Talented Members</p>
+                    </div>
+                    <div class="index-card">
+                        <h3>2016</h3>
+                        <p>Debut Year</p>
+                    </div>
+                    <div class="index-card">
+                        <h3>∞</h3>
+                        <p>BLINK Love</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="index-section2">
+            <h2 class="section-title">Featured Achievements</h2>
+            <div class="index-grid2">
+                <div class="index-card2">
+                    <h3>First K-pop Girl Group at Coachella</h3>
+                    <p>Made history performing at Coachella 2019 and 2023, bringing K-pop to one of the world's biggest music festivals.</p>
+                </div>
+                <div class="index-card2">
+                    <h3>World Tour Success</h3>
+                    <p>BORN PINK World Tour became one of the highest-grossing tours by a female group, visiting over 30 cities globally.</p>
+                </div>
+                <div class="index-card2">
+                    <h3>Record-Breaking MVs</h3>
+                    <p>Multiple music videos with over 1 billion views, including "DDU-DU DDU-DU" and "Kill This Love".</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="index-section3">
+            <h2>Join the BLINK Community</h2>
+            <p>Stay updated with the latest news, tours, and releases from BLACKPINK</p>
+            <a href="/tour" class="index-button">Explore Tour Dates</a>
+        </section>
+    </main>
+
+    <script src="/carousel.js" is:inline></script>
+
+	</Layout>

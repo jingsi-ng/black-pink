@@ -1,0 +1,61 @@
+---
+
+export interface Props {
+    title: string;
+    hasPlayer?: boolean;
+}
+
+const { title, hasPlayer = false } = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/style.css">
+        <slot name="extra-head" />
+	</head>
+	<body>
+
+		<header>
+        <div class="header-container">
+            <div class="name">
+                <h1><a href="/">BLACKPINK</a></h1>
+                <p class="tagline">In Your Area</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/tour">Tour</a></li>
+                    <li><a href="/playlist">Playlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+		<slot />
+        
+ <footer class:list={[{ 'footer-with-player': hasPlayer }]}>
+        <div class="footer-container">
+            <p class="footer-text">
+                <strong>BLACKPINK</strong> Official Fan Site | Created by BLINK for BLINK
+            </p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@BLACKPINK" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com/blackpinkofficial/" target="_blank">Instagram</a>
+                <a href="https://twitter.com/BLACKPINK" target="_blank">Twitter</a>
+            </div>
+            <p class="copyright">&copy; Chen See Ng 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js" is:inline></script>
+
+	</body>
+</html>
