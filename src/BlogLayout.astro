@@ -1,0 +1,25 @@
+---
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <article class="blog-article">
+    <header class="article-header">
+        <div class="article-top">
+            <span class="article-category">{frontmatter.category}</span>
+            <span class="article-date">{frontmatter.date}</span>
+        </div>
+        <h1 class="article-title">{frontmatter.title}</h1>
+        <p class="article-excerpt">{frontmatter.excerpt}</p>
+        
+    </header>
+    <div class="article-content">
+        <slot />
+    </div>
+    <div class="article-footer">
+        <a href="/news" class="back-button">Back to News</a>
+    </div>
+    </article>
+</Layout>
