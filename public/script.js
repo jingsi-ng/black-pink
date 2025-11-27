@@ -29,3 +29,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var modal = document.getElementById('videoModal');
+    var videoFrame = document.getElementById('videoFrame');
+    var closeBtn = document.querySelector('.video-close');
+
+    if (!modal) return;
+
+    for (var i = 0; i < galleryItems.length; i++) {
+        galleryItems[i].addEventListener('click', function() {
+            var videoId = this.getAttribute('data-video');
+            if (videoId) {
+                videoFrame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+                modal.classList.add('active');
+            }
+        });
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        videoFrame.src = '';
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
