@@ -441,6 +441,7 @@ footer::before {
 .carousel-names {
     margin-bottom: 20px;
     pointer-events: auto;
+    color: var(--black-primary);
 }
 
 .carousel-names span {
@@ -847,6 +848,8 @@ footer::before {
     align-items: center;
     justify-content: center;
     transition: transform 0.4s ease;
+    background: linear-gradient(135deg, var(--black-primary) 0%, var(--pink-primary) 100%);
+    position: relative;
 }
 
 .blog-post:hover .placeholder-image {

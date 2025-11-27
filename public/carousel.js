@@ -1,26 +1,26 @@
 const carouselImages = [
     {
-        gradient: 'linear-gradient(135deg, #000000 0%, #ff1493 50%, #000000 100%)',
+        gradient: 'linear-gradient(135deg, #c71585 0%, #000000 50%, #ff1493 100%)',
         title: 'BLACKPINK IN YOUR AREA',
         subtitle: 'World Tour 2025'
     },
     {
-        gradient: 'linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #c71585 100%)',
+        gradient: 'linear-gradient(35deg, #000000 0%, #ff1493 50%, #000000 100%)',
         title: 'PINK VENOM ERA',
         subtitle: 'Breaking Records Worldwide'
     },
     {
-        gradient: 'linear-gradient(135deg, #c71585 0%, #000000 50%, #ff1493 100%)',
+        gradient: 'linear-gradient(135deg, #ff69b4 0%, #000000 50%, #ff1493 100% )',
         title: 'BORN PINK ALBUM',
         subtitle: 'Now Available Everywhere'
     },
     {
-        gradient: 'linear-gradient(135deg, #ff69b4 0%, #000000 50%, #ff1493 100%)',
+        gradient: 'linear-gradient(135deg, #000000 0%, #c71585 50%, #ff69b4 100%)',
         title: 'BLACKPINK THE MOVIE',
         subtitle: 'Experience Their Journey'
     },
     {
-        gradient: 'linear-gradient(135deg, #000000 0%, #c71585 50%, #ff69b4 100%)',
+        gradient: 'linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #c71585 100%)',
         title: 'COACHELLA 2023',
         subtitle: 'Historic Performance'
     }
