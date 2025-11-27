@@ -1251,5 +1251,55 @@ footer::before {
 }
 
 .timeline-dot {
-    
+    position:absolute;
+    left: -1.8rem;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--pink-primary);
+    border: 4px solid var(--bg-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--pink-light);
+}
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow-1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px var(--shadow-3);
+}
+
+.timeline-content h3 {
+    color: var(--pink-primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-year {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-bottom {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.bottom {
+
 }
