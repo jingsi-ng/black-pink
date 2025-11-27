@@ -146,7 +146,6 @@ function playSong(index) {
         updateSongRows();
         startCDAnimation();
         updatePlayPauseButton();
-        showMessage(`Now playing: ${song.title}`, 'success');
     }).catch(error => {
         console.error('Playback failed:', error);
         isPlaying = false;

@@ -1076,6 +1076,11 @@ footer::before {
     margin: 0;
 }
 
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .tour-section2 {
     margin-bottom: 6rem;
 }
@@ -1128,6 +1133,7 @@ footer::before {
     font-weight: 900;
     line-height: 1;
     margin-bottom: 0.5rem;
+    color: var(--black-primary);
 }
 
 .tour-date .year {
@@ -1205,23 +1211,22 @@ footer::before {
     transition: all 0.3s ease;
     white-space: nowrap;
 }
-
-.primary {
+.tour-btn.primary {
     background: var(--gradient-pink);
     color: #e0e0e0;
 }
 
-.primary:hover {
+.tour-btn.primary:hover {
     transform: translateY(-3px);
 }
 
-.secondary {
+.tour-btn.secondary {
     background: transparent;
     color: var(--pink-primary);
     border: 2px solid var(--pink-primary);
 }
 
-.secondary:hover {
+.tour-btn.secondary:hover {
     background: var(--pink-primary);
     color: white;
 }
