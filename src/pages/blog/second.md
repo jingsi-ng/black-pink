@@ -8,7 +8,7 @@ excerpt: "YG Entertainment has officially confirmed that BLACKPINK will be makin
 
 # BLACKPINK Announces 2025 Comeback Plans
 
-![Comback](/images/comeback.jpg.webp)
+![Comeback](/images/comeback.jpg.webp)
 
 YG Entertainment has officially confirmed that BLACKPINK will be making their highly anticipated comeback in 2025 with a brand new album. After focusing on individual solo activities and the massive success of their BORN PINK World Tour, the four members are reuniting to create fresh music that promises to showcase their artistic maturity and evolution.
 

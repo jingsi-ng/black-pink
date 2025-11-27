@@ -29,16 +29,16 @@ var songs = [
     duration: "3:18", cover: 'linear-gradient(135deg, #000000, #ff69b4)', audioUrl: '/music/pretty-savage.mp3'},
     {title: "The Girls", artist: "BLACKPINK", album: "BORN PINK", 
     duration: "2:55", cover: 'linear-gradient(135deg, #c71585, #ff69b4)', audioUrl: '/music/the-girls.mp3'},
-    {title: "Jump", artist: "BLACKPIIK", album: "BORN PINK", 
-    duration: "2:55", cover: 'linear-gradient(135deg, #c71585, #ff69b4)', audioUrl: '/music/jump.mp3'},
-    {title: "Flower", artist: "JISOO", album: "SQUARE UP", 
-    duration: "3:56", cover: 'linear-gradient(135deg, #ff1493, #000000)', audioUrl: '/music/flower.mp3'},
-    {title: "Solo", artist: "JENNIE", album: "BORN PINK", 
-    duration: "3:07", cover: 'linear-gradient(135deg, #000000, #c71585)', audioUrl: '/music/solo.mp3'},
-    {title: "On Th Ground", artist: "ROSE", album: "THE ALBUM", 
-    duration: "3:02", cover: 'linear-gradient(135deg, #ff69b4, #ff1493)', audioUrl: '/music/on-the-ground.mp3'},
-    {title: "Money", artist: "LISA", album: "SINGLE", 
-    duration: "3:32", cover: 'linear-gradient(135deg, #ff69b4, #000000)', audioUrl: '/music/money.mp3'}
+    {title: "Jump", artist: "BLACKPINK", album: "JUMP", 
+    duration: "3:14", cover: 'linear-gradient(135deg, #c71585, #ff69b4)', audioUrl: '/music/jump.mp3'},
+    {title: "Flower", artist: "JISOO", album: "ME", 
+    duration: "2:53", cover: 'linear-gradient(135deg, #ff1493, #000000)', audioUrl: '/music/flower.mp3'},
+    {title: "Solo", artist: "JENNIE", album: "SOLO", 
+    duration: "2:49", cover: 'linear-gradient(135deg, #000000, #c71585)', audioUrl: '/music/solo.mp3'},
+    {title: "On Th Ground", artist: "ROSE", album: "R", 
+    duration: "2:48", cover: 'linear-gradient(135deg, #ff69b4, #ff1493)', audioUrl: '/music/on-the-ground.mp3'},
+    {title: "Money", artist: "LISA", album: "LALISA", 
+    duration: "2:48", cover: 'linear-gradient(135deg, #ff69b4, #000000)', audioUrl: '/music/money.mp3'}
 ];
 
 const originalSongs = [...songs];
@@ -57,9 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function setupAudioEvents() {
     if (!audioPlayer) return;
-
-    audioPlayer.addEventListener('canplay', () =>  
-        console.log('Audio ready to play'));
 
     audioPlayer.addEventListener('error', (e) => {
         console.error('Audio error:', e);
@@ -108,9 +105,9 @@ function displaySongList() {
     albumDiv.className = 'song-album-text';
     albumDiv.textContent = song.album;
 
-    const duartionDiv = document.createElement('div');
-    duartionDiv.className ='song-duration';
-    duartionDiv.textContent = song.duration;
+    const durationDiv = document.createElement('div');
+    durationDiv.className ='song-duration';
+    durationDiv.textContent = song.duration;
 
     const deleteBtn = document.createElement('div');
     deleteBtn.className = 'song-delete-btn';
@@ -122,7 +119,7 @@ function displaySongList() {
 
     row.onclick = () => playSong(index);
 
-    row.append(numberDiv, coverDiv, titleDiv, albumDiv, duartionDiv, deleteBtn);
+    row.append(numberDiv, coverDiv, titleDiv, albumDiv, durationDiv, deleteBtn);
     return row;
 }
     
@@ -348,7 +345,7 @@ function showMessage(text, type) {
     const messageBox = document.getElementById('addSongMessage');
     if (messageBox) {
         messageBox.textContent = text;
-        messageBox.className = `message-box${type} show`;
+        messageBox.className = `message-box ${type} show`;
 
         setTimeout(() => {
         messageBox.classList.remove('show');
