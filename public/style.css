@@ -856,8 +856,8 @@ footer::before {
     transform: scale(1.05);
 }
 
-.image-text {
-    font-size: 2rem;
+.bg-text {
+    font-size: 3.5rem;
     color: white;
     font-weight: 700;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
