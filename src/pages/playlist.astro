@@ -1,0 +1,145 @@
+---
+import Layout from '../Layout.astro';
+---
+
+<Layout title="BLACKPINK - MUsic Playlist" hasPlayer={true}>
+<link rel="stylesheet" href="/playlist.css" slot="extra" />
+    <main class="playlist-main">
+        <section class="playlist-section fade-in">
+            <div class="playlist-content">
+                <div class="playlist-cover">
+                    <div class="cd" id="mainCD">
+                        <div class="cd-inner"></div>
+                        <div class="cd-center"></div>
+                    </div>
+                </div>
+                <div class="playlist-info">
+                    <span class="playlist-type">PLAYLIST</span>
+                    <h1 class="playlist-title">BLACKPINK Hits</h1>
+                    <p class="playlist-description">All your favorite BLACKPINK songs in one place. Add your own favorites and shuffle to discover new vibes!</p>
+                    <div class="playlist-top">
+                        <span class="playlist-creator">BLINK Community</span>
+                        <span class="playlist-dot">•</span>
+                        <span id="playlistSongCount">20 songs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="playlist-section2">
+            <button id="playAllBtn" class="play-all-btn">
+                <span class="play-icon">▶</span> Play All
+            </button>
+            <button id="shufflePlaylistBtn" class="control-btn">
+                🔀 Shuffle
+            </button>
+            <button id="resetPlaylistBtn" class="control-btn">
+                🔄 Reset
+            </button>
+        </section>
+
+        <section class="playlist-section3">
+            <div class="song-list">
+                <div class="list-number">#</div>
+                <div class="list-cover"></div>
+                <div class="list-title">TITLE</div>
+                <div class="list-album">ALBUM</div>
+                <div class="list-duration">⏱</div>
+                <div class="list-actions"></div>
+            </div>
+            <div id="songListContainer" class="list-container">
+             
+            </div>
+        </section>
+
+        <div class="now-playing-bar fade-in-up" id="nowPlayingBar">
+            <div class="now-playing-info">
+                <div class="now-playing-cover">
+                    <div class="cd-small" id="playerCD">
+                        <div class="cd-inner-small"></div>
+                    </div>
+                </div>
+                <div class="now-playing-text">
+                    <div class="now-playing-title" id="nowPlayingTitle">Select a song</div>
+                    <div class="now-playing-artist" id="nowPlayingArtist">BLACKPINK</div>
+                </div>
+            </div>
+            <div class="now-playing-controls">
+                <button class="player-btn" id="prevSongBtn">⏮</button>
+                <button class="player-btn play-pause" id="playPauseBtn">▶</button>
+                <button class="player-btn" id="nextSongBtn">⏭</button>
+            </div>
+            <div class="now-playing-progress">
+                <span id="currentTime">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span id="duration">0:00</span>
+            </div>
+            <div class="volume-control">
+                <span class="volume-icon">🔊</span>
+                <input type="range" min="0" max="100" value="70" class="volume-slider" id="volumeSlider">
+            </div>
+        </div>
+
+        <section class="playlist-section4">
+            <h2 class="section4-title">Add Your Song</h2>
+            <p class="section4-subtitle">Build your personal BLACKPINK collection</p>
+            
+            <div class="add-form-container">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="newSongTitle">Song Title *</label>
+                        <input 
+                            type="text" 
+                            id="newSongTitle" 
+                            placeholder="e.g., Pink Venom"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="newAlbumName">Album Name</label>
+                        <input 
+                            type="text" 
+                            id="newAlbumName" 
+                            placeholder="e.g., BORN PINK"
+                        >
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="newArtistName">Artist</label>
+                        <input 
+                            type="text" 
+                            id="newArtistName" 
+                            placeholder="BLACKPINK"
+                            value="BLACKPINK"
+                        >
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="newDuration">Duration</label>
+                        <input 
+                            type="text" 
+                            id="newDuration" 
+                            placeholder="3:20"
+                        >
+                    </div>
+                </div>
+                
+                <button id="addNewSongBtn" class="add-song-btn">
+                    ➕ Add to Playlist
+                </button>
+            </div>
+
+            <div id="addSongMessage" class="message-box"></div>
+        </section>
+    </main>
+
+
+    <audio id="audioPlayer" preload="metadata"></audio>
+
+    <script src="/playlist-player.js" is:inline></script>
+</Layout>

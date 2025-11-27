@@ -456,7 +456,7 @@ footer::before {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-member-names span:hover {
+.carousel-names span:hover {
     background: rgba(255, 20, 147, 0.3);
     border-color: rgba(255, 20, 147, 0.8);
     transform: translateY(-5px);
@@ -689,7 +689,7 @@ footer::before {
     box-shadow: 0 10px 30px var(--shadow-4);
 }
 
-.about-section, .news-section, .playlist-hero {
+.about-section, .news-section {
     text-align: center;
     padding: 3rem 2rem;
     margin-bottom: 4rem;
@@ -1301,5 +1301,168 @@ footer::before {
 }
 
 .bottom {
+    padding: 0.5rem 1.2rem;
+    background: var(--gradient-pink);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
+.tour-section4 {
+    margin-bottom: 6rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px var(--shadow-2);
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 40px var(--shadow-4);
+}
+
+.gallery-text {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tour-section5 {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--gradient-bg);
+    border-radius: 20px;
+}
+
+.tour-section5 h2 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.tour-section5 p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.tour-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tour-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.tour-input:focus {
+    outline: none;
+    border-color: var(--pink-primary);
+    box-shadow: 0 0 0 3px var(--shadow-2);
+}
+
+.tour-btn {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background: var(--gradient-pink);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px var(--shadow-2);
+}
+
+.tour-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--shadow-4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+::selection {
+    background: var(--pink-primary);
+    color: white;
 }
