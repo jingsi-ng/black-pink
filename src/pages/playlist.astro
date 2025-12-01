@@ -27,13 +27,13 @@ import Layout from '../Layout.astro';
         </section>
 
         <section class="playlist-section2">
-            <button id="playAllBtn" class="play-all-btn">
+            <button type="button" id="playAllBtn" class="play-all-btn">
                 <span class="play-icon">▶</span> Play All
             </button>
-            <button id="shufflePlaylistBtn" class="control-btn">
+            <button type="button" id="shufflePlaylistBtn" class="control-btn">
                 🔀 Shuffle
             </button>
-            <button id="resetPlaylistBtn" class="control-btn">
+            <button type="button" id="resetPlaylistBtn" class="control-btn">
                 🔄 Reset
             </button>
         </section>
@@ -65,9 +65,9 @@ import Layout from '../Layout.astro';
                 </div>
             </div>
             <div class="now-playing-controls">
-                <button class="player-btn" id="prevSongBtn">⏮</button>
-                <button class="player-btn play-pause" id="playPauseBtn">▶</button>
-                <button class="player-btn" id="nextSongBtn">⏭</button>
+                <button type="button" class="player-btn" id="prevSongBtn">⏮</button>
+                <button type="button" class="player-btn play-pause" id="playPauseBtn">▶</button>
+                <button type="button" class="player-btn" id="nextSongBtn">⏭</button>
             </div>
             <div class="now-playing-progress">
                 <span id="currentTime">0:00</span>
@@ -86,52 +86,41 @@ import Layout from '../Layout.astro';
             <h2 class="section4-title">Add Your Song</h2>
             <p class="section4-subtitle">Build your personal BLACKPINK collection</p>
             
-            <div class="add-form-container">
+            <div class="form-container">
+                <form id="addSongForm" onsubmit="return false;">
                 <div class="form-row">
                     <div class="form-field">
                         <label for="newSongTitle">Song Title *</label>
-                        <input 
-                            type="text" 
-                            id="newSongTitle" 
-                            placeholder="e.g., Pink Venom"
-                            required
-                        >
+                        <input type="text" id="newSongTitle" placeholder="e.g., Pink Venom" required>
                     </div>
                     
                     <div class="form-field">
                         <label for="newAlbumName">Album Name</label>
-                        <input 
-                            type="text" 
-                            id="newAlbumName" 
-                            placeholder="e.g., BORN PINK"
-                        >
+                        <input type="text" id="newAlbumName" placeholder="e.g., BORN PINK">
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-field">
                         <label for="newArtistName">Artist</label>
-                        <input 
-                            type="text" 
-                            id="newArtistName" 
-                            placeholder="BLACKPINK"
-                            value="BLACKPINK"
-                        >
+                        <input type="text" id="newArtistName" placeholder="BLACKPINK" value="BLACKPINK">
                     </div>
                     
                     <div class="form-field">
                         <label for="newDuration">Duration</label>
-                        <input 
-                            type="text" 
-                            id="newDuration" 
-                            placeholder="3:20"
-                        >
+                        <input type="text" id="newDuration" placeholder="3:20">
                     </div>
                 </div>
                 
-                <button id="addNewSongBtn" class="add-song-btn">
+                <div class="form-buttons">
+                <button type="submit" class="add-song-btn">
                     Add to Playlist
                 </button>
+                <button type="reset" class="reset-form-btn">
+                    Clear Form
+                </button>
+            </div>
+            </form>
             </div>
 
             <div id="addSongMessage" class="message-box"></div>

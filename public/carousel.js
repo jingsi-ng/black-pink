@@ -42,7 +42,7 @@ function initializeCarousel() {
     
     if (!track || !dotsContainer) return; 
 
-    for (var i = 0; i < totalSlides; i++) {
+    for (let i = 0; i < totalSlides; i++) {
         const slide = document.createElement('div');
         slide.className = 'carousel-slide';
         slide.style.background = carouselImages[i].gradient;

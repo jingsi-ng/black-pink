@@ -28,19 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
             e.currentTarget.style.transform = 'translateY(0)';
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    var galleryItems = document.querySelectorAll('.gallery-item');
-    var modal = document.getElementById('videoModal');
-    var videoFrame = document.getElementById('videoFrame');
-    var closeBtn = document.querySelector('.video-close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+    const closeBtn = document.querySelector('.video-close');
 
     if (!modal) return;
 
-    for (var i = 0; i < galleryItems.length; i++) {
-        galleryItems[i].addEventListener('click', function() {
-            var videoId = this.getAttribute('data-video');
+    for (let i = 0; i < galleryItems.length; i++) {
+        galleryItems[i].addEventListener('click', () => {
+            const videoId = this.getAttribute('data-video');
             if (videoId) {
                 videoFrame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
                 modal.classList.add('active');
@@ -57,13 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
         closeBtn.addEventListener('click', closeModal);
     }
 
-    modal.addEventListener('click', function(e) {
+    modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }

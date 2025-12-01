@@ -545,7 +545,7 @@
     font-size: 1.1rem;
 }
 
-.add-form-container {
+.form-container {
     background: var(--card-bg);
     padding: 3rem;
     border-radius: 20px;
@@ -588,8 +588,14 @@
     background: var(--bg-primary);
 }
 
+.form-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 .add-song-btn {
-    width: 100%;
     padding: 1.2rem;
     background: var(--gradient-pink);
     color: white;
@@ -605,6 +611,25 @@
 .add-song-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px var(--shadow-4);
+}
+
+.reset-form-btn {
+    padding: 1.2rem;
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-form-btn:hover {
+    border-color: var(--pink-primary);
+    color: var(--pink-primary);
+    background: rgba(255, 20, 147, 0.1);
+    transform: translateY(-3px);
 }
 
 .message-box {

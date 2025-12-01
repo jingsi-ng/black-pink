@@ -297,7 +297,9 @@ function deleteSong(index) {
 }
     }
 
-function addNewSong() {
+function addNewSong(event) {
+    event.preventDefault();
+
     const titleInput = document.getElementById('newSongTitle');
     const albumInput = document.getElementById('newAlbumName');
     const artistInput = document.getElementById('newArtistName');
@@ -372,8 +374,8 @@ function setupEventListeners() {
     const nextBtn = document.getElementById('nextSongBtn');
     if (nextBtn) nextBtn.addEventListener('click', playNextSong);
 
-    const addBtn = document.getElementById('addNewSongBtn');
-    if (addBtn) addBtn.addEventListener('click', addNewSong);
+    const addSongForm = document.getElementById('addSongForm');
+    if (addSongForm) addSongForm.addEventListener('submit', addNewSong);
 
     const progressBar = document.querySelector('.progress-bar');
     if (progressBar) {
