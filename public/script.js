@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!modal) return;
 
-    for (let i = 0; i < galleryItems.length; i++) {
-        galleryItems[i].addEventListener('click', () => {
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
             const videoId = this.getAttribute('data-video');
             if (videoId) {
                 videoFrame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
                 modal.classList.add('active');
             }
         });
-    }
+    });
 
     function closeModal() {
         modal.classList.remove('active');
